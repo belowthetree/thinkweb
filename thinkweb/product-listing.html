@@ -1,12 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE 7]><html class="ie ie7"><![endif]-->
 <!--[if IE 8]><html class="ie ie8"><![endif]-->
 <!--[if IE 9]><html class="ie ie9"><![endif]-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link href="apple-touch-icon.png" rel="apple-touch-icon">
@@ -46,11 +48,11 @@
 	<div class="container-fluid">
 	  <div class="row">
 			<div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 ">
-			  <p>460 West 34th Street, 15th floor, New York  -  Hotline: 804-377-3580 - 804-399-3580</p>
+			  <p>No.238, SongLing Road,Qingdao  -  Hotline: 804-377-3580</p>
 			</div>
 			<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
-			  <div class="header__actions"><a href="#">Login & Regiser</a>
-				<div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD<i class="fa fa-angle-down"></i></a>
+			  <div class="header__actions"><a href="#">登录 & 注册</a>
+				<!-- <div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD<i class="fa fa-angle-down"></i></a>
 				  <ul class="dropdown-menu">
 					<li><a href="#"><img src="images/flag/usa.svg" alt=""> USD</a></li>
 					<li><a href="#"><img src="images/flag/singapore.svg" alt=""> SGD</a></li>
@@ -63,7 +65,7 @@
 					<li><a href="#">Japanese</a></li>
 					<li><a href="#">Chinese</a></li>
 				  </ul>
-				</div>
+				</div> -->
 			  </div>
 			</div>
 	  </div>
@@ -76,100 +78,197 @@
 	  </div>
 	  <div class="navigation__column center">
 			<ul class="main-menu menu">
-			  <li class="menu-item menu-item-has-children dropdown"><a href="index.html">Home</a>
-					<ul class="sub-menu">
+			  <li class="menu-item menu-item-has-children dropdown"><a href="index.html">首页</a>
+<!-- 					<ul class="sub-menu">
 					  <li class="menu-item"><a href="index.html">Homepage #1</a></li>
 					  <li class="menu-item"><a href="#">Homepage #2</a></li>
 					  <li class="menu-item"><a href="#">Homepage #3</a></li>
-					</ul>
+					</ul> -->
 			  </li>
-			  <li class="menu-item menu-item-has-children has-mega-menu"><a href="#">Men</a>
+			  <li class="menu-item menu-item-has-children has-mega-menu"><a href="#">Lenovo电脑</a>
 				<div class="mega-menu">
 				  <div class="mega-wrap">
 					<div class="mega-column">
-					  <ul class="mega-item mega-features">
-						<li><a href="product-listing.html">NEW RELEASES</a></li>
-						<li><a href="product-listing.html">FEATURES SHOES</a></li>
-						<li><a href="product-listing.html">BEST SELLERS</a></li>
-						<li><a href="product-listing.html">NOW TRENDING</a></li>
-						<li><a href="product-listing.html">SUMMER ESSENTIALS</a></li>
-						<li><a href="product-listing.html">MOTHER'S DAY COLLECTION</a></li>
-						<li><a href="product-listing.html">FAN GEAR</a></li>
-					  </ul>
-					</div>
-					<div class="mega-column">
-					  <h4 class="mega-heading">Shoes</h4>
+					  <h4 class="mega-heading">游戏本</h4>
 					  <ul class="mega-item">
-						<li><a href="product-listing.html">All Shoes</a></li>
-						<li><a href="product-listing.html">Running</a></li>
-						<li><a href="product-listing.html">Training & Gym</a></li>
-						<li><a href="product-listing.html">Basketball</a></li>
-						<li><a href="product-listing.html">Football</a></li>
+						<li><a href="product-listing.html">所有游戏本</a></li>
+						<li><a href="product-listing.html">拯救者Y7000</a></li>
+						<li><a href="product-listing.html">拯救者Y7000P</a></li>
+						<li><a href="product-listing.html">拯救者Y9000K</a></li>
+<!-- 						<li><a href="product-listing.html">Football</a></li>
 						<li><a href="product-listing.html">Soccer</a></li>
-						<li><a href="product-listing.html">Baseball</a></li>
+						<li><a href="product-listing.html">Baseball</a></li> -->
 					  </ul>
 					</div>
 					<div class="mega-column">
-					  <h4 class="mega-heading">CLOTHING</h4>
+					  <h4 class="mega-heading">轻薄本</h4>
 					  <ul class="mega-item">
-						<li><a href="product-listing.html">Compression & Nike Pro</a></li>
-						<li><a href="product-listing.html">Tops & T-Shirts</a></li>
-						<li><a href="product-listing.html">Polos</a></li>
-						<li><a href="product-listing.html">Hoodies & Sweatshirts</a></li>
-						<li><a href="product-listing.html">Jackets & Vests</a></li>
-						<li><a href="product-listing.html">Pants & Tights</a></li>
-						<li><a href="product-listing.html">Shorts</a></li>
+						<li><a href="product-listing.html">所有轻薄本</a></li>
+						<li><a href="product-listing.html">Y9000X</a></li>
+						<li><a href="product-listing.html">小新 14</a></li>
+						<li><a href="product-listing.html">小新 15</a></li>
+						<li><a href="product-listing.html">小新 青春版</a></li>
+						<li><a href="product-listing.html">小新潮7000-14</a></li>
+						<li><a href="product-listing.html">小新潮7000-15</a></li>
 					  </ul>
 					</div>
 					<div class="mega-column">
-					  <h4 class="mega-heading">Accessories</h4>
+					  <h4 class="mega-heading">便携本</h4>
 					  <ul class="mega-item">
-						<li><a href="product-listing.html">Compression & Nike Pro</a></li>
-						<li><a href="product-listing.html">Tops & T-Shirts</a></li>
-						<li><a href="product-listing.html">Polos</a></li>
-						<li><a href="product-listing.html">Hoodies & Sweatshirts</a></li>
-						<li><a href="product-listing.html">Jackets & Vests</a></li>
-						<li><a href="product-listing.html">Pants & Tights</a></li>
-						<li><a href="product-listing.html">Shorts</a></li>
+						<li><a href="product-listing.html">小新Air</a></li>
+						<li><a href="product-listing.html">小新Pro 13</a></li>
+						<li><a href="product-listing.html">YOGA C940</a></li>
+						<li><a href="product-listing.html">YOGA C740</a></li>
+						<li><a href="product-listing.html">YOGA S940</a></li>
+						<li><a href="product-listing.html">小新潮7000-13</a></li>
+						<li><a href="product-listing.html">YOGA Book2</a></li>
 					  </ul>
 					</div>
 					<div class="mega-column">
-					  <h4 class="mega-heading">BRAND</h4>
+					  <h4 class="mega-heading">常规本</h4>
 					  <ul class="mega-item">
-						<li><a href="product-listing.html">NIKE</a></li>
-						<li><a href="product-listing.html">Adidas</a></li>
-						<li><a href="product-listing.html">Dior</a></li>
-						<li><a href="product-listing.html">B&G</a></li>
+						<li><a href="product-listing.html">ideapad 330C</a></li>
+						<li><a href="product-listing.html">ideapad 340C</a></li>
+						<li><a href="product-listing.html">ideapad 320C</a></li>
+<!-- 						<li><a href="product-listing.html">B&G</a></li> -->
+					  </ul>
+					</div>
+					<div class="mega-column">
+						<h4 class="mega-heading">台式机</h4>
+						<ul class="mega-item">
+							<li><a href="product-listing.html">GeekPro</a></li>
+							<li><a href="product-listing.html">游戏台式机</a></li>
+							<li><a href="product-listing.html">一体台式机</a></li>
+							<li><a href="product-listing.html">分体台式机</a></li>
+							<li><a href="product-listing.html">显示器</a></li>
+						</ul>
+					</div>
+				  </div>
+				</div>
+			  </li>
+			  <li class="menu-item"><a href="#">Thinkpad电脑</a>
+				<div class="mega-menu">
+				  <div class="mega-wrap">
+					  <div class="mega-column">
+						<h4 class="mega-heading">ThinkPad</h4>
+						  <ul class="mega-item">
+					  		<li><a href="product-listing.html">X1系列（黑色智慧）</a></li>
+					  		<li><a href="product-listing.html">X系列（飞行家系列）</a></li>
+					  		<li><a href="product-listing.html">T系列（工程师系列）</a></li>
+					  		<li><a href="product-listing.html">S系列（潮极客系列）</a></li>
+							<li><a href="product-listing.html">E系列（先锋派系列）</a></li>
+					  	  </ul>
+					  </div>
+					  <div class="mega-column">
+						<h4 class="mega-heading">ThinkBook</h4>
+						  <ul class="mega-item">
+					  		<li><a href="product-listing.html">进取版</a></li>
+					  		<li><a href="product-listing.html">青春版</a></li>
+					  	  </ul>
+					  </div>
+					  <div class="mega-column">
+						<h4 class="mega-heading">ThinkCentre</h4>
+						  <ul class="mega-item">
+					  		<li><a href="product-listing.html">分体台式机</a></li>
+					  		<li><a href="product-listing.html">高性能一体机</a></li>
+					  	  </ul>
+					  </div>
+					  <div class="mega-column">
+						<h4 class="mega-heading">Thinkplus</h4>
+						  <ul class="mega-item">
+					  		<li><a href="product-listing.html">口红电源</a></li>
+					  		<li><a href="product-listing.html">随身充</a></li>
+					  		<li><a href="product-listing.html">拉杆箱</a></li>
+					  		<li><a href="product-listing.html">运动耳机</a></li>
+					  	  </ul>
+					  </div>
+					  <div class="mega-column">
+						<h4 class="mega-heading">Think配件</h4>
+						  <ul class="mega-item">
+					  		<li><a href="product-listing.html">电脑包</a></li>
+					  		<li><a href="product-listing.html">键鼠</a></li>
+					  		<li><a href="product-listing.html">电源适配器</a></li>
+					  		<li><a href="product-listing.html">转接&扩展设备</a></li>
+					  	  </ul>
+					  </div>
+				  </div>
+				</div>
+			  </li>
+			  <li class="menu-item"><a href="#">手机</a>
+				<div class="mega-menu">
+				  <div class="mega-wrap">
+					<div class="mega-column">
+					  <h4 class="mega-heading">Lenovo</h4>
+					  <ul class="mega-item">
+						<li><a href="product-listing.html">Z6 Pro 5G</a></li>
+						<li><a href="product-listing.html">Z6 Pro</a></li>
+						<li><a href="product-listing.html">Z6 青春版</a></li>
+						<li><a href="product-listing.html">Z5 Pro GT 5G</a></li>
+					  </ul>
+					</div>
+					<div class="mega-column">
+					  <h4 class="mega-heading">Motorola</h4>
+					  <ul class="mega-item">
+						<li><a href="product-listing.html">motorola p50</a></li>
+						<li><a href="product-listing.html">motorola z3</a></li>
+						<li><a href="product-listing.html">motorola p30</a></li>
+						<li><a href="product-listing.html">motorola e5 plus</a></li>
+					  </ul>
+					</div>
+					<div class="mega-column">
+					  <h4 class="mega-heading">专属配件</h4>
+					  <ul class="mega-item">
+						<li><a href="product-listing.html">联想Z5手机壳</a></li>
+						<li><a href="product-listing.html">Waatch X plus智能手表</a></li>
 					  </ul>
 					</div>
 				  </div>
 				</div>
 			  </li>
-			  <li class="menu-item"><a href="#">Women</a></li>
-			  <li class="menu-item"><a href="#">Kids</a></li>
-			  <li class="menu-item menu-item-has-children dropdown"><a href="#">News</a>
-					<ul class="sub-menu">
-					  <li class="menu-item menu-item-has-children dropdown"><a href="#">Blog-grid</a>
-							<ul class="sub-menu">
-							  <li class="menu-item"><a href="#">Blog Grid 1</a></li>
-							  <li class="menu-item"><a href="#">Blog Grid 2</a></li>
-							</ul>
-					  </li>
-					  <li class="menu-item"><a href="#">Blog List</a></li>
-					</ul>
+			  <li class="menu-item"><a href="#">配件</a>
+				<div class="mega-menu">
+				  <div class="mega-wrap">
+					<div class="mega-column">
+					  <h4 class="mega-heading">储存设备</h4>
+					  <ul class="mega-item">
+						<li><a href="product-listing.html">U盘</a></li>
+						<li><a href="product-listing.html">移动硬盘</a></li>
+					  </ul>
+					</div>
+					<div class="mega-column">
+					  <h4 class="mega-heading">娱乐生活</h4>
+					  <ul class="mega-item">
+						<li><a href="product-listing.html">耳机耳麦</a></li>
+						<li><a href="product-listing.html">音响</a></li>
+						<li><a href="product-listing.html">箱包</a></li>
+						<li><a href="product-listing.html">投影仪</a></li>
+						<li><a href="product-listing.html">录音笔</a></li>
+					  </ul>
+					</div>
+					<div class="mega-column">
+					  <h4 class="mega-heading">游戏装备</h4>
+					  <ul class="mega-item">
+						<li><a href="product-listing.html">游戏鼠标</a></li>
+						<li><a href="product-listing.html">游戏键盘</a></li>
+						<li><a href="product-listing.html">电竞耳机</a></li>
+						<li><a href="product-listing.html">电竞显示屏</a></li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
 			  </li>
-			  <li class="menu-item menu-item-has-children dropdown"><a href="#">Contact</a>
+			  <li class="menu-item menu-item-has-children dropdown"><a href="#">联系我们</a>
 					<ul class="sub-menu">
-					  <li class="menu-item"><a href="#">Contact Us #1</a></li>
-					  <li class="menu-item"><a href="#">Contact Us #2</a></li>
+					  <li class="menu-item"><a href="#">联系我们</a></li>
+					  <li class="menu-item"><a href="#">关于我们</a></li>
 					</ul>
 			  </li>
 			</ul>
 	  </div>
 	  <div class="navigation__column right">
-		<form class="ps-search--header" action="do_action" method="post">
-		  <input class="form-control" type="text" placeholder="Search Product…">
-		  <button><i class="ps-icon-search"></i></button>
+		<form class="ps-search--header">
+		  <input class="form-control" type="text" placeholder="Search Product…" id="product_name">
+		  <button type="button" onclick="search()"><i class="ps-icon-search"></i></button>
 		</form>
 		<div class="ps-cart"><a class="ps-cart__toggle" href="#"><span><i>20</i></span><i class="ps-icon-shopping-cart"></i></a>
 		  <div class="ps-cart__listing">
@@ -207,9 +306,9 @@
 </header>
 <div class="header-services">
   <div class="ps-services owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="7000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="false" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on">
-	<p class="ps-service"><i class="ps-icon-delivery"></i><strong>Free delivery</strong>: Get free standard delivery on every order with Shoe Store</p>
-	<p class="ps-service"><i class="ps-icon-delivery"></i><strong>Free delivery</strong>: Get free standard delivery on every order with Shoe Store</p>
-	<p class="ps-service"><i class="ps-icon-delivery"></i><strong>Free delivery</strong>: Get free standard delivery on every order with Shoe Store</p>
+	<p class="ps-service"><i class="ps-icon-delivery"></i><strong>Free delivery</strong>: Get free standard delivery on every order with Lenovo Store</p>
+	<p class="ps-service"><i class="ps-icon-delivery"></i><strong>Free delivery</strong>: Get free standard delivery on every order with Lenovo Store</p>
+	<p class="ps-service"><i class="ps-icon-delivery"></i><strong>Free delivery</strong>: Get free standard delivery on every order with Lenovo Store</p>
   </div>
 </div>
 <main class="ps-main">
@@ -218,10 +317,10 @@
 	  <div class="ps-product-action">
 		<div class="ps-product__filter">
 		  <select class="ps-select selectpicker">
-			<option value="1">Shortby</option>
-			<option value="2">Name</option>
-			<option value="3">Price (Low to High)</option>
-			<option value="3">Price (High to Low)</option>
+			<option value="1">综合</option>
+			<option value="2">型号</option>
+			<option value="3">价格（降序）</option>
+			<option value="3">价格（升序）</option>
 		  </select>
 		</div>
 		<div class="ps-pagination">
@@ -236,652 +335,52 @@
 		</div>
 	  </div>
 	  <div class="ps-product__columns">
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail">
+		<div id="products">
+		  <div v-for="value, key in products">
+		   <div class="ps-product__column">
+		     <div class="ps-shoe mb-30">
+			  <div class="ps-shoe__thumbnail">
 			  <div class="ps-badge"><span>New</span></div>
 			  <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
+			  </div>
+			  <div class="ps-shoe__content">
 			  <div class="ps-shoe__variants">
 				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
 				<select class="ps-rating ps-shoe__rating">
 				  <option value="1">1</option>
 				  <option value="1">2</option>
 				  <option value="1">3</option>
-				  <option value="1">4</option>
+				  <option value="1">4</option>	
 				  <option value="2">5</option>
 				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
+			   </div>
+			   <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">{{value['product_name']}}</a>
 				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
-				  <del>£220</del> £ 120</span>
+				  <del>£{{value['pre_price']}}</del> £ {{value['now_price']}}</span>
+			   </div>
 			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/2.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/3.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail">
-			  <div class="ps-badge ps-badge--sale"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/4.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
-				  <del>£220</del> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/5.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/6.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/7.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/8.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/9.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/10.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail">
-			  <div class="ps-badge"><span>New</span></div>
-			  <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
-				  <del>£220</del> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/2.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/3.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail">
-			  <div class="ps-badge ps-badge--sale"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/4.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
-				  <del>£220</del> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/5.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/6.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/7.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/8.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/9.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/10.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail">
-			  <div class="ps-badge"><span>New</span></div>
-			  <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
-				  <del>£220</del> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/2.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/3.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail">
-			  <div class="ps-badge ps-badge--sale"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/4.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price">
-				  <del>£220</del> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/5.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/6.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/7.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/8.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/9.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ps-product__column">
-		  <div class="ps-shoe mb-30">
-			<div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/10.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
-			</div>
-			<div class="ps-shoe__content">
-			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
-				  <option value="1">1</option>
-				  <option value="1">2</option>
-				  <option value="1">3</option>
-				  <option value="1">4</option>
-				  <option value="2">5</option>
-				</select>
-			  </div>
-			  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">Air Jordan 7 Retro</a>
-				<p class="ps-shoe__categories"><a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a href="#"> Jordan</a></p><span class="ps-shoe__price"> £ 120</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
+		    </div>
+		   </div>
+	     </div>
+	    </div>
 	  </div>
+	  <script type="text/javascript">
+	  			var products = new Vue({
+	  				el:"#products",
+	  				data:{
+	  					products:[],
+	  				},
+	  			})
+	  			function search(){
+	  				product_name = document.getElementById("product_name").value;
+	  				$.post("https://thinkpad.utools.club/index.php/thinkpad/search/search_product", {
+	  					product_name:product_name
+	  				}, function (data){
+	  					console.log(JSON.parse(data));
+	  					products.products = JSON.parse(data);
+	  				});
+	  			}
+	  </script>
 	  <div class="ps-product-action">
 		<div class="ps-product__filter">
 		  <select class="ps-select selectpicker">
@@ -906,126 +405,66 @@
 	<div class="ps-sidebar" data-mh="product-listing">
 	  <aside class="ps-widget--sidebar ps-widget--category">
 		<div class="ps-widget__header">
-		  <h3>Category</h3>
+		  <h3>CPU型号</h3>
 		</div>
 		<div class="ps-widget__content">
 		  <ul class="ps-list--checked">
-			<li class="current"><a href="product-listing.html">Life(521)</a></li>
-			<li><a href="product-listing.html">Running(76)</a></li>
-			<li><a href="product-listing.html">Baseball(21)</a></li>
-			<li><a href="product-listing.html">Football(105)</a></li>
-			<li><a href="product-listing.html">Soccer(108)</a></li>
-			<li><a href="product-listing.html">Trainning & game(47)</a></li>
-			<li><a href="product-listing.html">More</a></li>
+			<li class="current"><a href="product-listing.html">inter i3</a></li>
+			<li><a href="product-listing.html">inter i5</a></li>
+			<li><a href="product-listing.html">inter i7</a></li>
 		  </ul>
 		</div>
 	  </aside>
 	  <aside class="ps-widget--sidebar ps-widget--filter">
 		<div class="ps-widget__header">
-		  <h3>Category</h3>
+		  <h3>价格</h3>
 		</div>
 		<div class="ps-widget__content">
 		  <div class="ac-slider" data-default-min="300" data-default-max="2000" data-max="3450" data-step="50" data-unit="$"></div>
-		  <p class="ac-slider__meta">Price:<span class="ac-slider__value ac-slider__min"></span>-<span class="ac-slider__value ac-slider__max"></span></p><a class="ac-slider__filter ps-btn" href="#">Filter</a>
+		  <p class="ac-slider__meta">价格区间：<span class="ac-slider__value ac-slider__min"></span>-<span class="ac-slider__value ac-slider__max"></span></p><a class="ac-slider__filter ps-btn" href="#">过滤</a>
 		</div>
 	  </aside>
 	  <aside class="ps-widget--sidebar ps-widget--category">
 		<div class="ps-widget__header">
-		  <h3>Shoe Brand</h3>
+		  <h3>内存容量</h3>
 		</div>
 		<div class="ps-widget__content">
 		  <ul class="ps-list--checked">
-			<li class="current"><a href="product-listing.html">Nike(521)</a></li>
-			<li><a href="product-listing.html">Adidas(76)</a></li>
-			<li><a href="product-listing.html">Baseball(69)</a></li>
-			<li><a href="product-listing.html">Gucci(36)</a></li>
-			<li><a href="product-listing.html">Dior(108)</a></li>
-			<li><a href="product-listing.html">B&G(108)</a></li>
-			<li><a href="product-listing.html">Louis Vuiton(47)</a></li>
+			<li class="current"><a href="product-listing.html">4G</a></li>
+			<li><a href="product-listing.html">8G</a></li>
+			<li><a href="product-listing.html">16G</a></li>
+			<li><a href="product-listing.html">32G</a></li>
 		  </ul>
 		</div>
 	  </aside>
 	  <aside class="ps-widget--sidebar ps-widget--category">
 		<div class="ps-widget__header">
-		  <h3>Width</h3>
+		  <h3>硬盘容量</h3>
 		</div>
 		<div class="ps-widget__content">
 		  <ul class="ps-list--checked">
-			<li class="current"><a href="product-listing.html">Narrow</a></li>
-			<li><a href="product-listing.html">Regular</a></li>
-			<li><a href="product-listing.html">Wide</a></li>
-			<li><a href="product-listing.html">Extra Wide</a></li>
+			<li class="current"><a href="product-listing.html">512GB</a></li>
+			<li><a href="product-listing.html">1TB</a></li>
+			<li><a href="product-listing.html">含256G SSD</a></li>
+			<li><a href="product-listing.html">含512G SSD</a></li>
+			<li><a href="product-listing.html">含1TB SSD</a></li>
 		  </ul>
 		</div>
 	  </aside>
 	  <div class="ps-sticky desktop">
-		<aside class="ps-widget--sidebar">
-		  <div class="ps-widget__header">
-			<h3>Size</h3>
-		  </div>
-		  <div class="ps-widget__content">
-			<table class="table ps-table--size">
-			  <tbody>
-				<tr>
-				  <td class="active">3</td>
-				  <td>5.5</td>
-				  <td>8</td>
-				  <td>10.5</td>
-				  <td>13</td>
-				</tr>
-				<tr>
-				  <td>3.5</td>
-				  <td>6</td>
-				  <td>8.5</td>
-				  <td>11</td>
-				  <td>13.5</td>
-				</tr>
-				<tr>
-				  <td>4</td>
-				  <td>6.5</td>
-				  <td>9</td>
-				  <td>11.5</td>
-				  <td>14</td>
-				</tr>
-				<tr>
-				  <td>4.5</td>
-				  <td>7</td>
-				  <td>9.5</td>
-				  <td>12</td>
-				  <td>14.5</td>
-				</tr>
-				<tr>
-				  <td>5</td>
-				  <td>7.5</td>
-				  <td>10</td>
-				  <td>12.5</td>
-				  <td>15</td>
-				</tr>
-			  </tbody>
-			</table>
-		  </div>
-		</aside>
-		<aside class="ps-widget--sidebar">
-		  <div class="ps-widget__header">
-			<h3>Color</h3>
-		  </div>
-		  <div class="ps-widget__content">
-			<ul class="ps-list--color">
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			  <li><a href="#"></a></li>
-			</ul>
-		  </div>
+		<aside class="ps-widget--sidebar ps-widget--category">
+				<div class="ps-widget__header">
+				  <h3>屏幕尺寸</h3>
+				</div>
+				<div class="ps-widget__content">
+				  <ul class="ps-list--checked">
+					<li class="current"><a href="product-listing.html">13.3英寸</a></li>
+					<li><a href="product-listing.html">14英寸</a></li>
+					<li><a href="product-listing.html">15.6英寸</a></li>
+					<li><a href="product-listing.html">17英寸</a></li>
+					<li><a href="product-listing.html">17英寸以上</a></li>
+				  </ul>
+				</div>
 		</aside>
 	  </div>
 	  <!--aside.ps-widget--sidebar-->
