@@ -344,13 +344,13 @@
 					<div class="ps-badge"><span>New</span></div>
 					  
 					  <img v-on:click="jump1(value['product_id'])" id="imgjump" v-bind:src="'https://thinkpad.utools.club/static/uploads/' + value['image']" alt="">
-					<!-- <a class="ps-shoe__overlay" href="product-detail.html"></a> -->
+					
 				  </div>
 				  <div class="ps-shoe__content">
 					
 					<div class="ps-shoe__detail">
 						<a class="ps-shoe__name" href="#">{{value['product_name']}}</a>
-						<div id="name" style="display:none;" >{{value['product_id']}}</div> 
+						 
 					  <p class="ps-shoe__categories">
 						  <a href="#">{{value['product_type']}}</a>
 						</p>
@@ -419,36 +419,62 @@
 		<div class="ps-owl--colection owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="30" data-owl-nav="false" data-owl-dots="false" data-owl-item="4" data-owl-item-xs="1" data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="4" data-owl-duration="1000" data-owl-mousedrag="on">
 			
 		
-				
-				  <div class="ps-shoes--carousel">
+				<div id="productsTop">
+					<div v-for="value, key in product">
+				  <div  id="productsTop" v-for="value, key in product" class="ps-shoes--carousel">
 					<div class="ps-shoe">
 					  <div class="ps-shoe__thumbnail">
-						<div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+						<div class="ps-badge ps-badge--sale">
+							<span>HOT</span></div>
+							
+								<img v-on:click="jumpTop(value['product_id'])" id="imgjump" v-bind:src="'https://thinkpad.utools.club/static/uploads/' + value['image']" alt="">
+								
 					  </div>
 					  <div class="ps-shoe__content">
-						<div class="ps-shoe__variants">
-						  <div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img src="images/shoe/4.jpg" alt=""><img src="images/shoe/5.jpg" alt=""></div>
-						  <select class="ps-rating ps-shoe__rating">
-							<option value="1">1</option>
-							<option value="1">2</option>
-							<option value="1">3</option>
-							<option value="1">4</option>
-							<option value="2">5</option>
-						  </select>
-						</div>
+						
 						<div class="ps-shoe__detail">
-							<a class="ps-shoe__name" href="product-detai.html">Air Jordan 7 Retro</a>
-							
+							<a class="ps-shoe__name" href="#">{{value['product_name']}}</a>
+							 
 						  <p class="ps-shoe__categories">
-							  <a href="#">Men shoes</a>,
-							  <a href="#"> Nike</a>,
-							  <a href="#"> Jordan</a></p>
-							  <span class="ps-shoe__price"> £ 120</span>
+							  <a href="#">{{value['product_type']}}</a>
+							</p>
+							<span class="ps-shoe__price"> <del>£{{value['pre_price']}}</del> £ {{value['now_price']}}</span>
 						</div>
 					  </div>
 					</div>
 				  </div>
+				  <script>
+				  	function jumpTop(id){
+				  		console.log(id)
+				  		var value=id;
+				  		localStorage.setItem('product_id',value);
+				  		window.location.href = 'product-detail.html';
+				  	}
+				  </script>
 				  
+				  <script type="text/javascript">
+				  			var product = new Vue({
+				  			el:"#productsTop",
+				  			data:{
+				  				product:[],
+				  			},
+				  		})
+				  		function searchTop(){
+				  		
+				  		$.post("https://thinkpad.utools.club/index.php/thinkpad/search/search_product", {
+				  			
+				  		}, function (data){
+				  			console.log(JSON.parse(data));
+				  			product.product = JSON.parse(data);
+				  		});
+				  	  }
+				  	  searchTop()
+				   </script>
+				   
+				   
+				   </div>
+				   		 		</div>
+				   
 		</div>
 	  </div>
 	</div>
