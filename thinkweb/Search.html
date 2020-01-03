@@ -7,6 +7,7 @@
 <meta charset="utf-8">
 		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
@@ -93,9 +94,9 @@
 	  <div class="navigation__column right">
 		<form class="ps-search--header">
 		  <input class="form-control" type="text" placeholder="Search Product…" id="product_name">
-		  <button type="button" onclick="search()"><i class="ps-icon-search"></i></button>
+		  <button type="button" id="search"><i class="ps-icon-search"></i></button>
 		</form>
-		
+
 		<div class="ps-cart"><a class="ps-cart__toggle" href="#"><span><i>20</i></span><i class="ps-icon-shopping-cart"></i></a>
 		  <div class="ps-cart__listing">
 			<div class="ps-cart__content">
@@ -142,21 +143,23 @@
 	<div class="ps-products" data-mh="product-listing">
 	  <div class="ps-product-action">
 		<div class="ps-product__filter">
-		  <select class="ps-select selectpicker">
+		  <select id="select1" class="ps-select selectpicker" onchange="sort()">
 			<option value="1">综合</option>
-			<option value="2" onclik="sortByPriceUp">价格（从低到高）</option>
-			<option value="3" onclik="sortByPriceUp">价格（从高到低）</option>
-			<option value="4" onclik="sortByPrice">发布时间(最新)</option>
+			<option value="2">价格（从低到高）</option>
+			<option value="3">价格（从高到低）</option>
+			<option value="4">发布时间(最新)</option>
 		  </select>
 		</div>
 		<div class="ps-pagination">
 		  <ul class="pagination">
-			<li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-			<li class="active"><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+			<li class="" v-if="curpage>1"><a href="#" v-on:click="curpage--,pageClick(),btnClick(curpage--)"><i class="fa fa-angle-left"></i></a></li>
+			<li class="" v-if="curpage==1"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+			<li v-for="index in indexs" v-bind:class="{ 'active': curpage == index}">
+			      <a v-on:click="btnClick(index)">{{ index }}</a>
+			</li>
+			<!-- <li><a href="#">...</a></li> -->
+			<li v-if="curpage<all"><a href="#" v-on:click="curpage++,pageClick(),btnClick(curpage++)"><i class="fa fa-angle-right"></i></a></li>
+			<li v-if="curpage>=all"><a href="#"><i class="fa fa-angle-right"></i></a></li>
 		  </ul>
 		</div>
 	  </div>
@@ -167,12 +170,20 @@
 		     <div class="ps-shoe mb-30">
 			  <div class="ps-shoe__thumbnail">
 			  <div class="ps-badge"><span>New</span></div>
-			  <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img v-bind:src="'https://thinkpad.utools.club/static/uploads/' + value['image']" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+			  <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div>
+			  <a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a>
+				<img v-bind:src="'https://thinkpad.utools.club/static/uploads/' + value['image']" alt="">
+			  <a class="ps-shoe__overlay" href="product-detail.html"></a>
 			  </div>
 			  <div class="ps-shoe__content">
 			  <div class="ps-shoe__variants">
-				<div class="ps-shoe__variant normal"><img src="images/shoe/2.jpg" alt=""><img src="images/shoe/3.jpg" alt=""><img v-bind:src="'https://thinkpad.utools.club/static/uploads/' + value['image']"  alt=""><img src="images/shoe/5.jpg" alt=""></div>
-				<select class="ps-rating ps-shoe__rating">
+				<div class="ps-shoe__variant normal">
+					<img src="images/shoe/2.jpg" alt="">
+					<img src="images/shoe/3.jpg" alt="">
+					<img src="images/shoe/4.jpg" alt="">
+					<img src="images/shoe/5.jpg" alt="">
+				</div>
+				<select class="ps-rating ps-shoe__rating"><!--这是图片下方的推荐星星-->
 				  <option value="1">1</option>
 				  <option value="1">2</option>
 				  <option value="1">3</option>
@@ -189,26 +200,6 @@
 		   </div>
 	     </div>
 	    </div>
-	  </div>
-	  <div class="ps-product-action">
-		<div class="ps-product__filter">
-		  <select class="ps-select selectpicker">
-			<option value="1">综合</option>
-			<option value="2" onclik="sortByPriceUp">价格(从低到高)</option>
-			<option value="3" onclik="sortByPriceDown">价格(从高到低)</option>
-			<option value="4" onclik="sortByTime">发布时间(最新)</option>
-		  </select>
-		</div>
-		<div class="ps-pagination">
-		  <ul class="pagination">
-			<li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-			<li class="active"><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-		  </ul>
-		</div>
 	  </div>
 	</div>
 	</div>
@@ -245,51 +236,158 @@
 			products:[],
 		},
 	})
-	function search(){
+		$("#search").click(function(){
+			product_name = document.getElementById("product_name").value;
+			$.post("https://thinkpad.utools.club/index.php/thinkpad/search/search_product", {
+				product_name:product_name
+			}, function (data){
+				console.log(JSON.parse(data));
+				products.products = JSON.parse(data);
+			});
+			page.showpages()
+		});
+		function searchByType(obj){
+			var product_type = obj.getAttribute('id');
+			localStorage.setItem('type',product_type);
+			// alert(product_type);
+			$.post("https://thinkpad.utools.club/index.php/thinkpad/search/search_product", {
+				product_type:product_type,
+				product_name:""
+			}, function (data){
+				console.log(JSON.parse(data));
+				products.products = JSON.parse(data);
+			});
+		}
+		function sort(){
+			var objS = document.getElementById("select1");
+			var id = objS.options[objS.selectedIndex].value;
+			//console.log(1);
+			if(id == 2){
+				for(i=0;i<products.products.length;i++){
+					for(j=1;j<products.products.length - i;j++){
+						//console.log(products.products[j])
+						if(products.products[j-1]['now_price']>products.products[j]['now_price']){
+							var temp = products.products[j];
+							Vue.set(products.products, j-1, products.products[j]);
+							Vue.set(products.products, j, temp);
+						}
+					}
+				}
+			}else if(id == 3){
+				for(i=0;i<products.products.length;i++){
+					for(j=1;j<products.products.length - i;j++){
+						//console.log('a')
+						if(products.products[j-1]['now_price']<products.products[j]['now_price']){
+							var temp = products.products[j];
+							Vue.set(products.products, j, products.products[j-1]);
+							Vue.set(products.products, j - 1, temp);
+						}
+					}
+				}
+			}else if(id == 4){ 
+				for(i=0;i<products.products.length-1;i++){
+					for(j=1;j<products.products.length-i;j++){
+						if(products.products[j-1].date<products.products[j].date){
+							var temp = products.products[j];
+							products.products[j]=products.products[j-1];
+							products.products[j-1]=temp;
+						}
+					}
+				}
+			}		
+			console.log(products.products);
+			products.products[0]['now_price'] = products.products[0]['now_price'];
+		}
+		$('#menu1 li').click(function () {
+			var f = this;
+			$('#menu1 li').each(function () {
+			this.className = this == f ? 'active' : ''
+			});
+		});
+		$('#menu2 li').click(function () {
+			var f = this;
+			$('#menu2 li').each(function () {
+				this.className = this == f ? 'active' : ''
+			});
+		});
+	var page = new Vue({
+		el: '.ps-pagination',
+		data: {
+			curpage: 1,//当前页码
+			all: 1,//总页数
+			num: 6,
+			indexs:[],
+		},
+		methods: {
+			btnClick: function(data){//页码点击事件
+				console.log(data)
+				console.log(data)
+				console.log(data)
+				if(true){
+					this.curpage = data;
+					var product_type = localStorage.getItem('type');
+					product_name = document.getElementById("product_name").value;
+					$.post("https://thinkpad.utools.club/index.php/thinkpad/search/search_product", {
+						index:this.curpage,
+						product_type:product_type,
+						product_name:product_name
+					},function (data){
+						console.log(this.curpage)
+						console.log(product_type)
+						console.log(product_name)
+						console.log(JSON.parse(data));
+						products.products = JSON.parse(data);
+					});
+				}
+			},
+			pageClick: function(){ 
+				console.log('现在在'+this.curpage+'页');
+			},
+			showpages: function(){
+				var left = 1;
+				var right = this.all;
+				if(this.all>= 5){
+					if(this.curpage > 3 && this.curpage < this.all-2){
+						left = this.curpage - 2
+						right = this.curpage + 2
+					}
+					else{
+						if(this.curpage<=3){
+							left = 1
+							right = 5
+						}else{
+							right = this.all
+							left = this.all -4
+						}
+					}
+				}
+				for(i=0;left<=right;i++){
+					this.$set(this.indexs,i,left)
+					left++
+				}
+			}
+		},
+		watch: {
+			curpage: function(oldValue , newValue){
+			console.log(arguments);
+			}
+		}
+	});
+	function getall(){
+		var product_type = localStorage.getItem('type');
 		product_name = document.getElementById("product_name").value;
-		$.post("https://thinkpad.utools.club/index.php/thinkpad/search/search_product", {
-			product_name:product_name
-	  	}, function (data){
-			console.log(JSON.parse(data));
-			products.products = JSON.parse(data);
-	  	});
-	}	
-	function searchByType(obj){
-		var product_type = obj.getAttribute('id');
-		alert(product_type);
-		$.post("https://thinkpad.utools.club/index.php/thinkpad/search/search_product", {
+		$.post("https://thinkpad.utools.club/index.php/thinkpad/search/get_length", {
 			product_type:product_type,
-			product_name:""
+			product_name:product_name
 		}, function (data){
+			tmp = JSON.parse(data)
 			console.log(JSON.parse(data));
-			products.products = JSON.parse(data);
+			page.all = parseInt((tmp['length'] + page.num - 1) / page.num)
+			console.log(page.all)
 		});
 	}
-	function sortByPriceDown() {
-		for(int i=0;i<products.products.length;i++){
-			for(int j=0;j<products.products.length-i;j++){
-				if(products.products[j].project_price<products.products[j+1].project_price)){
-					var temp = products.products[j];
-					products.products[j+1]=products.products[j];
-					products.products[j]=temp;
-				}
-			}
-		}
-	}
-	function sortByPriceUp() {
-		for(int i=0;i<products.products.length;i++){
-			for(int j=0;j<products.products.length-i;j++){
-				if(products.products[j].project_price>products.products[j+1].project_price)){
-					var temp = products.products[j];
-					products.products[j+1]=products.products[j];
-					products.products[j]=temp;
-				}
-			}
-		}
-	}
-	function sortByTime(){
-		products.products.sort(function(a,b){return Date.parse(a.date) - Date.parse(b.date);});
-	}
+	getall()
+	page.showpages()
 </script>
 <!-- Custom scripts-->
 <script type="text/javascript" src="js/main.js"></script>
