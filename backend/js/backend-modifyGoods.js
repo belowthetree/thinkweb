@@ -29,40 +29,40 @@ $('#submitButton').click(function(){
 	var product_name = document.forms["ModifyingForm"]["ModifiedName"].value
 	var product_type = document.forms["ModifyingForm"]["ModifiedType"].value
 	var desc = document.forms["ModifyingForm"]["ModifiedDescription"].value
-	var product_id = document.forms["ModifyingForm"]["ModifiedId"].value
+	//var product_id = document.forms["ModifyingForm"]["ModifiedId"].value
 	var now_price = document.forms["ModifyingForm"]["ModifiedNowPrice"].value
 	var pre_price = document.forms["ModifyingForm"]["ModifiedPrePrice"].value
 
 	var data = new FormData();
 	data.append('product_name', product_name)
-	data.append('product_id', product_id)
-	data.append('product_type', product_id)
-	data.append('desc', product_id)
-	data.append('product_id', product_id)
-	data.append('pre_price', product_id)
+	//data.append('product_id', product_id)
+	data.append('product_type', product_type)
+	data.append('desc', desc)
+	data.append('now_price', now_price)
+	data.append('pre_price', pre_price)
+	data.append('image', img[0])
 	
-	var img_data = new FormData()
-	img_data.append('image', img[0])
-	img_data.append('product_id', product_id)
-
+	//var img_data = new FormData()
+	//img_data.append('product_id', product_id)
+	console.log("send");
 	$.ajax({
-	  url: 'https://thinkpad.utools.club/static/uploads/',
+	  url: 'https://thinkpad.utools.club/index.php/thinkpad/manager/upload_product',
 	  type: 'POST',
 	  data: data,
 	  cache: false,
 	  processData: false,
 	  contentType: false,
 	  success:function (data){
-		console.log(data)
-		if (data == 'success')
-			search();
+	  console.log(data)
+		if (data == 'success'){
+			alert("Upload Successful!")}
 		else
 			alert("失败")
 	  }
 	})
 	
-	$.ajax({
-	  url: 'https://thinkpad.utools.club/index.php/thinkpad/manager/upload_image',
+	/*$.ajax({
+	  url: 'https://thinkpad.utools.club/index.php/thinkpad/manager/upload_product',
 	  type: 'POST',
 	  data: img_data,
 	  cache: false,
@@ -71,9 +71,13 @@ $('#submitButton').click(function(){
 	  success:function (data){
 	  console.log(data)
 		if (data == 'success')
+			alert("Upload Successful!")
 			search();
 		else
 			alert("失败")
 	  }
-	})
+	})*/
+	
+	alert("Upload Successful!")
+	
 })

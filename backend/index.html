@@ -18,10 +18,10 @@
   <link href="css/sb-admin.css" rel="stylesheet">
 </head>
 
-<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<body class="fixed-nav sticky-footer bg-light" id="page-top">
   <!-- Navigation-->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.html">Backend Management System</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -35,11 +35,27 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="ManageGoods">
-          <a class="nav-link" href="manage-goods.html">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseManageGoods" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">管理商品</span>
           </a>
+          <ul class="sidenav-second-level collapse" id="collapseManageGoods">
+            <li>
+              <a href="manage-sellinggoods.html">正在销售的商品</a>
+            </li>
+            <li>
+              <a href="manage-soldgoods.html">已卖出的商品</a>
+            </li>
+            <li>
+              <a href="manage-purchasedgoods.html">已买到的商品</a>
+            </li>
+            <li>
+              <a href="blank.html">添加/修改商品信息</a>
+            </li>
+          </ul>
         </li>
+		
+		
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="ManageAccounts">
           <a class="nav-link" href="manage-accounts.html">
             <i class="fa fa-fw fa-table"></i>
@@ -60,7 +76,7 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+<!--         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">Example Pages</span>
@@ -110,11 +126,11 @@
               </ul>
             </li>
           </ul>
-        </li>
+        </li> -->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
           <a class="nav-link" href="#">
             <i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">Link</span>
+            <span class="nav-link-text">首页</span>
           </a>
         </li>
       </ul>
